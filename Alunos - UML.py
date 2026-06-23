@@ -5,6 +5,12 @@ class Presenca:
         self.ID = ID
         self.data = data
 
+class Atividade:
+    def __init__(self, codigo:int, descricao:str, valor:float) -> None:
+        self.codigo = codigo
+        self.descricao = descricao
+        self.valor = valor
+
 class Pessoa:
     def __innit__(self,CPF:str, nome:str) -> None:
         self.CPF = CPF
@@ -18,12 +24,6 @@ class Docente(Pessoa):
     def __init__(self, CPF:str, nome:str, salario:float) -> None:
         super().__init__(CPF, nome)
         self.salario = salario
-
-class Atividade:
-    def __init__(self, codigo:int, descricao:str, valor:float) -> None:
-        self.codigo = codigo
-        self.descricao = descricao
-        self.valor = valor
 
 class Estudante(Pessoa):
     def __init__(self, CPF:str, nome:str, RA:str) -> None:
