@@ -1,4 +1,10 @@
 from datetime import date 
+
+class Presenca:
+    def __init__(self, ID:int, data:date) -> None:
+        self.ID = ID
+        self.data = data
+
 class Pessoa:
     def __innit__(self,CPF:str, nome:str) -> None:
         self.CPF = CPF
@@ -13,6 +19,12 @@ class Docente(Pessoa):
         super().__init__(CPF, nome)
         self.salario = salario
 
+class Atividade:
+    def __init__(self, codigo:int, descricao:str, valor:float) -> None:
+        self.codigo = codigo
+        self.descricao = descricao
+        self.valor = valor
+
 class Estudante(Pessoa):
     def __init__(self, CPF:str, nome:str, RA:str) -> None:
         super().__init__(CPF, nome)
@@ -21,14 +33,3 @@ class Estudante(Pessoa):
 
     def addAtividade(self, atv:Atividade) -> None:
         self.listaAtividade.append(atv)
-
-class Presenca:
-    def __init__(self, ID:int, data:date) -> None:
-        self.ID = ID
-        self.data = data
-
-class Atividade:
-    def __init__(self, codigo:int, descricao:str, valor:float) -> None:
-        self.codigo = codigo
-        self.descricao = descricao
-        self.valor = valor 
